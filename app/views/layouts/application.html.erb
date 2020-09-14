@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChatApp</title>
+	<%= csrf_meta_tags %>
+	<%= csp_meta_tag %>
+
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+	<%= render "shared/navbar" %>
+
+	<div class="container col-md-10 p-2 mt-2">
+		<%= render "shared/flash_messages" %>
+		<div class="mt-1 row">
+			<%= yield %>
+		</div>
+	</div>
+
+</body>
+</html>

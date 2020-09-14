@@ -1,0 +1,13 @@
+<nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar pb-4">
+  <div class="position-sticky pt-3">
+    <ul class="nav flex-column">
+      <% users.each do |user| %>
+      <li class="nav-item">
+
+        <%= link_to user.email, conversations_path(user_id: user), method: :post, class: 'nav-link' %>
+
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

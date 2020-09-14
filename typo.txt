@@ -1,0 +1,10 @@
+Link: 			http://staging.techbrain.ai/ruby/setup-chatapp/initial-setup
+Currently: 		Here, we will not testing the app so skipping and using postgresql as database.
+Needs to be:	Here, we will not test the app so skipping and using postgresql as database.
+Or:				Here, we will not be testing the app so skipping and using postgresql as database.
+
+
+
+Link: 			
+Currently: 		
+Needs to be:	

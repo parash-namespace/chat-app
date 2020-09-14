@@ -1,0 +1,8 @@
+var conversation = document.getElementById('conversation_<%= @conversation.id %>');
+var message = document.createElement('span');
+message.innerHTML = "<%= j(render 'messages/message', message: @message, user: current_user) %>";
+conversation.appendChild(message);
+document.getElementById('message-body').value = '';
+var messages_list = document.querySelector('.messages-list')
+var scrollPosition = messages_list.scrollHeight;
+messages_list.scrollTo(0, scrollPosition);

@@ -1,0 +1,26 @@
+<%= render 'home/users', users: @users  %>
+
+<main class="col-md-9 col-lg-10 d-md-block mt-4 mt-md-0">
+  <div class="d-flex flex-column w-100 mx-2">
+    <div class="card w-100 bg-light border-light">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h5>Chat with <%= @conversation.opposed_user(current_user).email %></h5>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 mx-2 messages-list" id="conversation_<%= @conversation.id %>">
+      <%= render 'conversations/conversation_content', messages: @messages, user: current_user %>
+    </div>
+    <%= form_for [@conversation, @conversation.messages.new], remote: true, html: { class: 'my-3 mb-md-0 d-flex' } do |f| %>
+      <%= f.text_field :body, class: "form-control", autocomplete: "off", id: 'message-body' %>
+      <%= f.submit "Send", class: "btn btn-success ml-2" %>
+    <% end %>
+  </div>
+</main>
+
+<script>
+  var messages_list = document.querySelector('.messages-list')
+  var scrollPosition = messages_list.scrollHeight;
+  messages_list.scrollTo(0, scrollPosition);
+</script>

@@ -1,0 +1,7 @@
+<div class="d-flex mt-1 <%= user.id == message.user_id ? 'justify-content-end ml-5' : 'mr-5' %>">
+  <div class="card rounded-pill m-1 ml-0 <%= user.id == message.user_id ? 'bg-info border-info text-light' : 'bg-light' %>">
+    <div class="card-body w-100 px-3 py-2">
+      <%= message.body %>
+    </div>
+  </div>
+</div>
