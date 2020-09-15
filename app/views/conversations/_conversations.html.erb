@@ -1,0 +1,21 @@
+<% conversations.each do |conversation| %>
+  <li class="nav-item">
+    <%= link_to conversation_path(conversation), class: 'nav-link' do %>
+      <%= conversation.opposed_user(user).email %>
+      <% unless user == conversation.messages.last&.user || conversation.messages.unread.count.zero? %>
+        <sup>
+          <span class="badge rounded-pill bg-danger">
+            <%= conversation.messages.unread.count %>
+          </span>
+        </sup>
+      <% end %>
+    <% end %>
+  </li>
+<% end %>
+
+<% if conversations.blank? %>
+  <li class="nav-item">
+    <p class="nav-link text-muted">
+      You have no conversations yet. Click any user on the list to start conversation.
+    </p>
+<% end %>

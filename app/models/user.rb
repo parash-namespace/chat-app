@@ -5,5 +5,9 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  :recoverable, :rememberable, :validatable
+
+  def conversations
+  	Conversation.where(sender_id: id).or(Conversation.where(recipient_id: id)).order('updated_at DESC')
+  end
 end
