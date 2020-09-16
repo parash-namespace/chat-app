@@ -15,6 +15,17 @@ Suggested:
 
 
 
-Link: 			
-Currently: 		
-Needs to be:	
+Link: 			http://staging.techbrain.ai/ruby/actioncable-best-practices/unread-message-notification
+Currently: 		To receive data we need receive method is backend i.e.
+Needs to be:	To receive data we need receive method in backend i.e.
+
+
+
+Link: 			http://staging.techbrain.ai/ruby/setup-chatapp/setting-up-bootstrap
+Currently: 		Self-directed lesson: Setup user model
+Needs to be:	Self-directed lesson: Setup bootstrap
+
+
+Link: 			http://staging.techbrain.ai/ruby/actioncable-best-practices/introducing-active-job
+Currently: 		It's completely independant.
+Needs to be:	It's completely independent.

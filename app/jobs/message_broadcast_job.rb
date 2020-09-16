@@ -15,7 +15,7 @@ class MessageBroadcastJob < ApplicationJob
 		ActionCable.server.broadcast(
 			"conversations-#{user.id}",
 			message: render_message(user, message),
-			conversation_id: message.conversation.id,
+			conversations_content: render_conversations(user),
 			message_id: message.id,
 			conversation_id: message.conversation.id
 			)

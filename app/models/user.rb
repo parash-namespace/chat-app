@@ -9,6 +9,6 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :validatable
 
   def conversations
-  	Conversation.where(sender_id: id).or(Conversation.where(recipient_id: id)).order('updated_at DESC')
+  	Conversation.where(sender_id: id).or(Conversation.where(recipient_id: id))
   end
 end
